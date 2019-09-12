@@ -1,9 +1,31 @@
 require_relative 'config/environment'
 require 'sinatra/activerecord/rake'
-# require 'tty-prompt'
-# require 'rest-client'
+require 'tty-prompt'
+require 'rest-client'
+
+# RestClient.get 'https://itunes.apple.com/search?parameterkeyvalue'
+# https://itunes.apple.com/search?term=iron
+
 
 desc 'starts a console'
 task :console do
   Pry.start
 end
+
+desc 'starts cli'
+task :cli do
+  cli = CommandLineInterface.new 
+  cli.main_menu
+end
+
+
+# prompt = TTY::Prompt.new
+
+# prompt.ask('What is your name?')
+
+
+
+
+
+
+

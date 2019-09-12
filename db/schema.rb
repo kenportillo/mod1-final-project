@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2019_09_09_182815) do
   create_table "songs", force: :cascade do |t|
     t.string "name"
     t.string "artist"
-    t.float "duration"
   end
 
   create_table "users", force: :cascade do |t|
